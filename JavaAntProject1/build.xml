@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="JavaAntProject1" default="run1">
+ 	<target name="run" depends="compile">
+		<java classname="com.package1.HelloProgram">
+			<classpath path="organizeJavaClassFile"> </classpath>
+		</java>
+	</target>
+	<target name="run1" depends="run2">
+		<java classname="com.package1.ClassName">
+			<classpath path="organizeJavaClassFile"> </classpath>
+		</java>
+	</target>
+	<target name="run2" depends="run">
+		<java classname="com.package1.testclass">
+			<classpath path="organizeJavaClassFile"> </classpath>
+		</java>
+	</target>
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="./src" destdir="organizeJavaClassFile"></javac>
+	</target>
+</project>
